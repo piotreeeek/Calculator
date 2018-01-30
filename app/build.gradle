@@ -5,7 +5,7 @@ android {
     defaultConfig {
         applicationId "com.example.piotrek.calculator"
         minSdkVersion 23
-        targetSdkVersion 26
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -26,4 +26,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     compile 'org.mozilla:rhino:1.7R4'
+    compile 'net.objecthunter:exp4j:0.4.4'
 }

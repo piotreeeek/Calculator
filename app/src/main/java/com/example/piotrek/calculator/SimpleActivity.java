@@ -7,13 +7,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import org.mozilla.javascript.Context;
-import org.mozilla.javascript.Scriptable;
+import net.objecthunter.exp4j.Expression;
+import net.objecthunter.exp4j.ExpressionBuilder;
 
 public class SimpleActivity extends AppCompatActivity implements View.OnClickListener{
 
     private TextView textView;
-    boolean toClear = false;
+    private boolean toClear = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,26 +31,19 @@ public class SimpleActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     public void onEqualsClick(View v){
-        Context rhino = Context.enter();
-// turn off optimization to work with android
-        rhino.setOptimizationLevel(-1);
-
         String evaluation = textView.getText().toString();
 
         try {
-            Scriptable scope = rhino.initStandardObjects();
-            String result = rhino.evaluateString(scope, evaluation, "JavaScript", 1, null).toString();
-            textView.setText(result);
+
+            Expression exp = new ExpressionBuilder(evaluation).build();
+            double result = exp.evaluate();
+            textView.setText(String.valueOf(result));
 
         }
         catch (Exception e){
             Log.d("solve exception: ", e.getMessage());
             textView.setText(R.string.wrong_equation);
             toClear = true;
-        }
-        finally {
-
-            Context.exit();
         }
 
     }
