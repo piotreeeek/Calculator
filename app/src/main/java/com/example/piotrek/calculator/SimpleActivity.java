@@ -30,7 +30,7 @@ public class SimpleActivity extends AppCompatActivity implements View.OnClickLis
         textView.append(((Button) findViewById(v.getId())).getText().toString());
     }
 
-    public void onEqualsClick(View v){
+    public void onEqualsClick(@SuppressWarnings("unused") View v){
         String evaluation = textView.getText().toString();
 
         try {
