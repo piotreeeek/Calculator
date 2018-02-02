@@ -3,28 +3,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.piotrek.calculator.MainActivity"
-    android:gravity="center">
+    android:gravity="center"
+    tools:context="com.example.piotrek.calculator.MainActivity">
 
     <Button
         android:id="@+id/simple_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/simple_calc"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:text="@string/simple_calc" />
+
     <Button
         android:id="@+id/advance_btn"
-        android:layout_below="@id/simple_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/advance_calc"
-        android:layout_centerHorizontal="true"/>
+        android:layout_below="@id/simple_btn"
+        android:layout_centerHorizontal="true"
+        android:text="@string/advance_calc" />
+
     <Button
         android:id="@+id/exit_btn"
-        android:layout_below="@id/advance_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/exit"
-        android:layout_centerHorizontal="true"/>
+        android:layout_below="@id/advance_btn"
+        android:layout_centerHorizontal="true"
+        android:text="@string/exit" />
 
 </RelativeLayout>

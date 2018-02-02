@@ -9,7 +9,7 @@
     <TextView
         android:id="@+id/result"
         android:layout_width="match_parent"
-        android:layout_height="100dp" />
+        android:layout_height="@dimen/result_portrait_height" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -46,6 +46,7 @@
             android:onClick="onClick"
             android:text="@string/plus"
             tools:ignore="ButtonStyle" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -83,6 +84,7 @@
             android:onClick="onClick"
             android:text="@string/minus"
             tools:ignore="ButtonStyle" />
+
     </LinearLayout>
 
 
@@ -121,6 +123,7 @@
             android:onClick="onClick"
             android:text="@string/div"
             tools:ignore="ButtonStyle" />
+
     </LinearLayout>
 
 
@@ -129,11 +132,11 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/btn_comma"
+            android:id="@+id/btn_dot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onClick"
-            android:text="@string/comma"
+            android:text="@string/dot"
             tools:ignore="ButtonStyle" />
 
         <Button
@@ -150,7 +153,6 @@
             android:layout_height="wrap_content"
             android:onClick="onEqualsClick"
             android:text="@string/equals"
-            android:enabled="false"
             tools:ignore="ButtonStyle" />
 
         <Button
@@ -160,10 +162,13 @@
             android:onClick="onClick"
             android:text="@string/mlt"
             tools:ignore="ButtonStyle" />
+
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <Button
             android:id="@+id/pow"
             android:layout_width="wrap_content"
@@ -171,6 +176,7 @@
             android:onClick="onClick"
             android:text="@string/pow"
             tools:ignore="ButtonStyle" />
+
         <Button
             android:id="@+id/bracket_1"
             android:layout_width="wrap_content"
@@ -178,6 +184,7 @@
             android:onClick="onClick"
             android:text="@string/bracket_1"
             tools:ignore="ButtonStyle" />
+
         <Button
             android:id="@+id/bracket_2"
             android:layout_width="wrap_content"
@@ -185,68 +192,83 @@
             android:onClick="onClick"
             android:text="@string/bracket_2"
             tools:ignore="ButtonStyle" />
+
         <Button
             android:id="@+id/del"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/del"
             android:onClick="onDeleteClick"
+            android:text="@string/del"
             tools:ignore="ButtonStyle" />
+
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <Button
             android:id="@+id/sqrt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/sqrt"
             android:onClick="onClick"
+            android:text="@string/sqrt"
             tools:ignore="ButtonStyle" />
+
         <Button
             android:id="@+id/powx"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/powx"
             android:onClick="onClick"
+            android:text="@string/powx"
             tools:ignore="ButtonStyle" />
+
         <Button
             android:id="@+id/exp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/exp"
             android:onClick="onClick"
+            android:text="@string/exp"
             tools:ignore="ButtonStyle" />
+
         <Button
             android:id="@+id/sin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/sin"
             android:onClick="onClick"
+            android:text="@string/sin"
             tools:ignore="ButtonStyle" />
+
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <Button
             android:id="@+id/cos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/cos"
             android:onClick="onClick"
+            android:text="@string/cos"
             tools:ignore="ButtonStyle" />
+
         <Button
             android:id="@+id/tg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onClick"
             android:text="@string/tg"
             tools:ignore="ButtonStyle" />
+
         <Button
             android:id="@+id/ctg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onClick"
             android:text="@string/ctg"
             tools:ignore="ButtonStyle" />
+
     </LinearLayout>
 
 </LinearLayout>
